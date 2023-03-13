@@ -8,7 +8,7 @@ app.use(express.static(static_path ));
 
 //Routing
 app.get("",(req,res)=>{
-    res.send("welcome to nautiyal channel")
+    res.send("welcome to nautiyal channel1")
 })
 
 app.get("/about",(req,res)=>{
