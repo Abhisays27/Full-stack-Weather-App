@@ -2,29 +2,28 @@ const express = require('express');
 const path = require('path')
 const app = express();
 const port = process.env.PORT || 8000;
+
 // public static path
 const static_path = path.join(__dirname,"../public");
+app.set('view engine', 'hbs');
 app.use(express.static(static_path ));
 
 //Routing
 app.get("",(req,res)=>{
-    res.send("welcome to nautiyal channel1")
+    res.render('index')
 })
 
 app.get("/about",(req,res)=>{
-    res.send("welcome to about page")
+    res.render('about')
 })
 
 app.get("/weather",(req,res)=>{
-    res.send("welcome to weather page")
+    res.render("welcome to weather page")
 })
 
-app.get("/weather",(req,res)=>{
-    res.send("welcome to weather page")
-})
 
 app.get("*",(req,res)=>{
-    res.send("opps 404 error page!")
+    res.render("opps 404 error page!")
 })
 
 

@@ -104,8 +104,9 @@ background-color: var(--main-bg);
     box-shadow: 0 8px 6px -6px var(--main-color);  
   }
 
-  .main_header_right figure img{
+  .main_header_left figure img{
 
+    filter: drop-shadow(0 0.5rem 1rem rgba(0,0,0,0.3))
   }
 
   /* footer code */
